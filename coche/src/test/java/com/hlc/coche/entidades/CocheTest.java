@@ -19,7 +19,7 @@ class CocheTest {
 	@DisplayName("Prueba de Constructor con Parametros")
 	void testConstructorConParametros() {
 		String marca = "Toyota";
-		String matricula = "12345ABC";
+		String matricula = "1234ABC";
 		String color = "Rojo";
 		
 		Coche cochePrueba = new Coche(marca, matricula, color);
