@@ -14,6 +14,20 @@ public class Coche {
 	private String Matricula;
 	private String Color;
 	
+	public Coche() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Coche(String marca, String matricula, String color) {
+		super();
+		Marca = marca;
+		Matricula = matricula;
+		Color = color;
+	}
+
+
+
 	public Long getId() {
 		return id;
 	}
@@ -41,7 +55,7 @@ public class Coche {
 	public String getColor() {
 		return Color;
 	}
-	
+
 	public void setColor(String color) {
 		Color = color;
 	} 
