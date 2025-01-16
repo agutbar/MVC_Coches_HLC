@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Formulario</title>
+	</head>
+	<body>
+		<h1>Añadir Coches</h1>
+		<a th:href="@{/coches/lista}">Ver lista de Coches</a>
+		<form th:action="@{/coches}" th:object="${coche}" th:method="post">
+			<input type="hidden" th:field="{id}"/>
+			
+			<label for="marca">Marca</label>
+			<input type="text" name="marca" id="marca" required/>
+		</form>
+	</body>
+</html>

@@ -23,7 +23,7 @@ class CocheServicioImplTest {
 	@Mock //-> Simulamos el repositorio como Dependencia
 	private CocheRepositorio cocheRepositorio;
 	
-	@InjectMocks //-> Creamos una instancia real de CocheServicioImpl y se inyecta automaticamente el
+	@InjectMocks //-> Creamos una instancia real de CocheServicioImpl y se inyecta automaticamente el mock de cocheRepositorio en esta clase
 	private CocheServicioImpl cocheServicio;
 	
 	@BeforeEach
@@ -33,7 +33,10 @@ class CocheServicioImplTest {
 	
 	@Test
 	void testObtenerTodosLosCoches() {
-		List<Coche> coches = Arrays.asList(new Coche ("Toyota", "1234ABC", "Rojo"), new Coche ("Fort", "9876ZYX", "Verde"));
+		List<Coche> coches = Arrays.asList(
+				new Coche ("Toyota", "1234ABC", "Rojo"), 
+				new Coche ("Fort", "9876ZYX", "Verde")
+				);
 		
 		when(cocheRepositorio.findAll()).thenReturn(coches);
 		
